@@ -12,7 +12,7 @@ def insert_audit_start(env_config, system, table, operation, start_time):
     audit_table = f"{env_config.CATALOG}.{env_config.SCHEMA}.{env_config.AUDIT_TABLE}"
     spark.sql(f"""
         INSERT INTO {audit_table} VALUES (
-            '{system}', '{system}', '{table}', '{operation}',
+            '{system}_{table}_{operation}', '{system}', '{table}', '{operation}',
             TIMESTAMP('{start_time}'), NULL, NULL
         )
     """)
