@@ -6,3 +6,6 @@ TABLES = {
     "credit_card_data_mart": "credit_card_account_datamart"
 }
 ENVIRONMENT = "dev"
+
+# Audit table configuration
+AUDIT_TABLE = "audit_table"
